@@ -23,7 +23,7 @@ export function PredictiveText({ dictionary }: Props) {
           type="text" 
           autoCorrect="off"
           autoComplete="off"
-          placeholder="Taper quelque chose"
+          placeholder="Tapez quelque chose"
           className="h-full w-full pl-3 pr-12 bg-transparent outline-none font-medium placeholder:text-gray-500 caret-blue-500"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)} 

@@ -55,7 +55,7 @@ export function PredictionsWrapper({ lastWord, dictionary, inputRef, setInputVal
               key={predictions?.[index]?.text ?? index}
               tabIndex={0}
               className={clsx(
-                "bg-white w-1/3 px-0.5 flex justify-center items-center outline-none group",
+                "bg-white w-1/3 px-0.5 flex justify-center items-center outline-none group cursor-pointer",
                 index == 0 && "rounded-tl-full rounded-bl-full",
                 index == 2 && "rounded-tr-full rounded-br-full"
               )}
@@ -64,7 +64,7 @@ export function PredictionsWrapper({ lastWord, dictionary, inputRef, setInputVal
               onKeyDown={handleKeyDown}
             >
               <span 
-                className="text-sm whitespace-nowrap overflow-hidden text-ellipsis font-medium group-focus:text-blue-500 group-focus:scale-110 duration-150 ease-out"
+                className="text-sm whitespace-nowrap overflow-hidden text-ellipsis font-medium group-focus:text-blue-500 group-active:text-blue-500 group-focus:scale-110 group-active:scale-110 duration-150 ease-out"
               >
                 {predictions?.[index]?.text ?? ''}
               </span>
