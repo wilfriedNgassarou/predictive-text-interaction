@@ -6,7 +6,7 @@ import { Credits, ErrorScreen, PredictiveText, SplashScreen } from "./components
 function App() {
   const [dictionary, setDictionary] = useState<WordEntry[]>([])
   
-  const [isLoading, setisLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
 
   useMount(() => {
@@ -15,7 +15,7 @@ function App() {
       // filter by most frequent word 
       .then(data => setDictionary(data.sort((a, b) => b.frequency - a.frequency)))
       .catch(() => setIsError(true))
-      .finally(() => setisLoading(false))
+      .finally(() => setIsLoading(false))
   })
 
   
